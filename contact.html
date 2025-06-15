@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us - Eden Drift Gardening</title>
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <style>
+    /* CSS Variables for theme */
+    :root {
+      --color-primary: #256d24;
+      --color-primary-light: #58a447;
+      --color-primary-dark: #1c4c19;
+      --color-background: #fefcf7;
+      --color-text-primary: #334d1e;
+      --color-text-secondary: #6b7280;
+      --color-white: #ffffff;
+      --border-radius: 12px;
+      --spacing-sm: 12px;
+      --spacing-md: 24px;
+      --spacing-lg: 48px;
+      --shadow-light: rgba(0, 0, 0, 0.08);
+    }
+    /* Reset and base styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--color-background);
+      color: var(--color-text-primary);
+      line-height: 1.6;
+      font-size: 18px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a {
+      color: var(--color-primary);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover,
+    a:focus {
+      color: var(--color-primary-light);
+      outline: none;
+    }
+    h1,h2,h3,h4,h5,h6 {
+      margin: 0;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+    }
+    p {
+      color: var(--color-text-secondary);
+      margin-bottom: var(--spacing-md);
+      text-align: justify;
+    }
+    .container {
+      max-width: 900px;
+      margin-left: auto; margin-right: auto;
+      padding-left: var(--spacing-md);
+      padding-right: var(--spacing-md);
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--color-white);
+      box-shadow: 0 2px 8px var(--shadow-light);
+      z-index: 1000;
+    }
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .logo {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      user-select: none;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .logo-icon {
+      font-size: 2.5rem;
+      color: var(--color-primary-light);
+    }
+    nav {
+      display: flex;
+      gap: var(--spacing-lg);
+    }
+    nav a {
+      font-weight: 600;
+      font-size: 1rem;
+      display: inline-block;
+      padding: 8px 0;
+    }
+    nav a:hover,
+    nav a:focus {
+      color: var(--color-primary-light);
+    }
+    section.content-section {
+      padding: var(--spacing-lg) 0;
+      background: var(--color-white);
+      border-radius: var(--border-radius);
+      box-shadow: 0 6px 20px var(--shadow-light);
+      margin: var(--spacing-lg) auto;
+    }
+    section.content-section h1 {
+      font-size: 2.75rem;
+      margin-bottom: var(--spacing-lg);
+      text-align: center;
+      color: var(--color-primary-dark);
+    }
+    section.content-section h2 {
+      font-size: 1.75rem;
+      margin-top: var(--spacing-lg);
+      margin-bottom: var(--spacing-md);
+      color: var(--color-primary-dark);
+    }
+    section.content-section p {
+      margin-bottom: var(--spacing-md);
+      font-size: 1rem;
+      text-align: justify;
+    }
+    /* Contact Form Styles */
+    .contact-form {
+      max-width: 700px;
+      margin: 0 auto 48px auto;
+      padding: 24px;
+      background: var(--color-background);
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 10px var(--shadow-light);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .contact-form label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: block;
+      color: var(--color-primary-dark);
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid var(--color-primary-light);
+      border-radius: var(--border-radius);
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      color: var(--color-text-primary);
+      resize: vertical;
+      transition: border-color 0.3s ease;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: var(--color-primary-dark);
+      box-shadow: 0 0 8px var(--color-primary-light);
+    }
+    .contact-form textarea {
+      min-height: 120px;
+    }
+    .contact-form button {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      font-weight: 700;
+      font-size: 1.125rem;
+      padding: 16px 0;
+      border: none;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.25s ease;
+      box-shadow: 0 6px 15px rgba(37,109,36,0.4);
+    }
+    .contact-form button:hover,
+    .contact-form button:focus {
+      background-color: var(--color-primary-light);
+      outline: none;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px rgba(88,164,71,0.6);
+    }
+    /* Footer */
+    footer {
+      background-color: var(--color-primary-dark);
+      color: var(--color-white);
+      padding: var(--spacing-lg) var(--spacing-md);
+      text-align: center;
+      font-size: 1rem;
+    }
+    footer address {
+      font-style: normal;
+      line-height: 1.5;
+    }
+    /* Responsive */
+    @media (max-width: 767px) {
+      section.content-section h1 {
+        font-size: 2rem;
+      }
+      nav {
+        gap: var(--spacing-md);
+      }
+      nav a {
+        font-size: 1rem;
+      }
+      .contact-form {
+        padding: var(--spacing-md);
+      }
+    }
+    @media (max-width: 480px) {
+      .container {
+        padding-left: var(--spacing-sm);
+        padding-right: var(--spacing-sm);
+      }
+      nav {
+        gap: var(--spacing-sm);
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+<header role="banner" aria-label="Main navigation">
+  <div class="container nav-container">
+    <a href="index.html" class="logo" aria-label="Eden Drift Gardening Home">
+      <span class="material-icons logo-icon" aria-hidden="true" focusable="false">forest</span>
+      Eden Drift
+    </a>
+    <nav aria-label="Primary">
+    <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0"aria-current="page">Contact us</a>
+    </nav>
+  </div>
+</header>
+
+<section class="content-section" aria-label="Contact Us">
+  <div class="container">
+
+    <form class="contact-form" aria-label="Contact form" novalidate>
+      <label for="name">Full Name <span aria-hidden="true" style="color:#e53e3e;">*</span></label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required aria-required="true" autocomplete="name" />
+
+      <label for="email">Email Address <span aria-hidden="true" style="color:#e53e3e;">*</span></label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required aria-required="true" autocomplete="email" />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="+1 555 123 4567" autocomplete="tel" />
+
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" placeholder="Subject of your message" />
+
+      <label for="message">Message <span aria-hidden="true" style="color:#e53e3e;">*</span></label>
+      <textarea id="message" name="message" placeholder="Write your message here" required aria-required="true"></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <h1>Contact Us</h1>
+    <p>
+      At Eden Drift Gardening, we are dedicated to providing exceptional service and support to our customers. Whether you have questions about our gardening services, want to request a quote, or simply wish to provide feedback, we are here for you. Your experience matters deeply to us, and we strive to respond promptly and helpfully to every inquiry.
+    </p>
+    <h2>1. Customer Service Availability</h2>
+    <p>
+      Our customer service team is available Monday through Friday, from 9 AM to 6 PM. During these hours, you can reach out to us by phone or email, and we will ensure your queries are addressed with professionalism and care. For urgent matters outside of these hours, please leave a detailed message, and we will get back to you as soon as possible.
+    </p>
+    <h2>2. Phone Support</h2>
+    <p>
+      Phone support offers direct access to our knowledgeable representatives who can assist with service inquiries, booking appointments, and provide guidance on our gardening offerings. Call us at +1 (855) 911-7722 to speak with a friendly associate ready to help you make the most of your gardening experience.
+    </p>
+    <h2>3. Email Support</h2>
+    <p>
+      Prefer written communication? Email us at contact@edendriftgardening.com for detailed questions, quotes requests, or to convey any concerns. Our team monitors emails during business hours and aims to respond within one business day. Email is a convenient way to track your communication history and receive clear, written answers.
+    </p>
+    <h2>4. Service Requests</h2>
+    <p>
+      You can request specific gardening or landscaping services by contacting us via phone or email. Provide details about your property, desired services, and preferred scheduling times. Our team will review your request and provide a timely response including pricing and appointment availability.
+    </p>
+    <h2>5. Location and Service Areas</h2>
+    <p>
+      Eden Drift Gardening primarily serves clients in New York City and surrounding areas. Our central office is located at 239 Greene St, New York, NY 10003, USA. We tailor our services based on property location and local environmental conditions, ensuring the best care possible.
+    </p>
+    <h2>6. Request for On-Site Visits</h2>
+    <p>
+      For a comprehensive gardening assessment, you can request an on-site visit by one of our horticulturists or landscapers. During the visit, we evaluate your outdoor space, discuss goals, and offer tailored recommendations. On-site visits help us provide accurate quotes and detailed service plans.
+    </p>
+    <h2>7. Emergency Support</h2>
+    <p>
+      Our team can support certain urgent gardening needs such as storm damage cleanup or pest outbreaks. Though these cases receive priority, availability is subject to schedule and resource allocation. Contact us immediately in such situations and we will do our best to assist quickly.
+    </p>
+    <h2>8. Feedback and Complaints</h2>
+    <p>
+      We welcome your feedback to continually improve our services. If you have concerns or complaints, please contact our customer care team. We commit to resolving issues promptly, professionally, and to your satisfaction. Feedback helps us maintain high standards and client trust.
+    </p>
+    <h2>9. Booking Confirmation</h2>
+    <p>
+      Once a service appointment is requested, we will confirm your booking via email or phone with all relevant details including date, time, and scope of work. Please confirm appointments promptly to ensure scheduling accuracy and avoid conflicts.
+    </p>
+    <h2>10. Payment Inquiries</h2>
+    <p>
+      For questions regarding invoices, payment options, or billing cycles, our accounts team is available to assist. We offer various payment methods including credit card, bank transfer, and cash on delivery where applicable. Payment must be made according to agreed terms to continue uninterrupted service.
+    </p>
+
+    <!-- ... continue with the remaining points similarly ... -->
+
+    <h2>11. Requesting Service Changes</h2>
+    <p>
+      If you need to adjust, postpone, or cancel a scheduled service, please notify us at least 24-48 hours in advance. This helps us allocate resources efficiently and offer your slot to other clients as needed. Service changes are subject to availability and cancellation policies.
+    </p>
+    <h2>12. Quotes and Estimates</h2>
+    <p>
+      We provide free, no-obligation quotes for all services based on your requirements and property specifics. It is recommended to provide detailed information or images of your garden to receive the most accurate estimate.
+    </p>
+    <h2>13. Frequently Asked Questions</h2>
+    <p>
+      Many common questions about gardening care, service processes, and scheduling can be addressed via our FAQ section on the website or by contacting customer support directly.
+    </p>
+    <h2>14. Service Area Limits</h2>
+    <p>
+      We currently operate within designated service areas around New York City. Requests from outside these regions may incur additional charges or may not be fulfillable depending on distance and logistics.
+    </p>
+    <h2>15. Personal Consultations</h2>
+    <p>
+      To assist clients with complex gardening projects, we offer personal consultations with experts. These consultations can be in-person or virtual, allowing tailored advice and detailed planning.
+    </p>
+    <h2>16. Response Times</h2>
+    <p>
+      Our goal is to respond to all inquiries within one business day. During peak times, responses may take longer, but we strive to keep you informed about expected wait times.
+    </p>
+    <h2>17. Online Contact Form</h2>
+    <p>
+      Our website includes an easy-to-use contact form for general inquiries. Provide your name, email, subject, and message to reach out to us quickly. We monitor form submissions regularly.
+    </p>
+    <h2>18. Newsletter Subscription</h2>
+    <p>
+      Subscribe to our newsletter for updates on gardening tips, special offers, and company news. You may unsubscribe at any time via links provided in each newsletter email.
+    </p>
+    <h2>19. Social Media</h2>
+    <p>
+      Connect with us on social media platforms for the latest project photos, client stories, and interactive gardening content. Our handles and links are available on our website.
+    </p>
+    <h2>20. Privacy and Confidentiality</h2>
+    <p>
+      We respect your confidentiality and never share your personal contact information outside of necessary service-related communications and legal requirements.
+    </p>
+    <h2>21. Service Feedback</h2>
+    <p>
+      After completion of services, we encourage clients to provide feedback to help us improve. Positive reviews and testimonials support our growth and help new clients trust our quality.
+    </p>
+    <h2>22. Emergency Contact</h2>
+    <p>
+      For emergencies related to garden safety or health hazards, contact our emergency support line immediately. We provide advice and dispatch urgent care when possible.
+    </p>
+    <h2>23. Partnership Inquiries</h2>
+    <p>
+      We are open to establishing partnerships with other landscape professionals or suppliers. Please reach out via email or phone to discuss opportunities.
+    </p>
+    <h2>24. Careers and Employment</h2>
+    <p>
+      To inquire about job opportunities at Eden Drift Gardening, visit our career page or contact human resources directly for current openings and application procedures.
+    </p>
+    <h2>25. Customer Education</h2>
+    <p>
+      Our team offers workshops and online resources to educate customers on best gardening practices, seasonal tips, and sustainable landscaping techniques.
+    </p>
+    <h2>26. Request for Quotations</h2>
+    <p>
+      For detailed and customized service quotations, please contact our office with specifications about your project scope, budget, and timeline.
+    </p>
+    <h2>27. Billing Errors</h2>
+    <p>
+      If you identify any discrepancies or errors on your bill, contact our billing department promptly for review and correction.
+    </p>
+    <h2>28. Service Guarantees</h2>
+    <p>
+      Although we strive for perfection, service guarantees are subject to terms and conditions outlined during booking. We commit to remedy any reasonable issues promptly.
+    </p>
+    <h2>29. Service Limitations</h2>
+    <p>
+      Certain services depend on environmental factors or third-party products and may be limited by weather, supplier availability, or regulations.
+    </p>
+    <h2>30. Liability Limits</h2>
+    <p>
+      Our liability related to services is limited as detailed in our Terms and Conditions. We cannot be held responsible for damages beyond our control or negligence.
+    </p>
+    <h2>31. Billing & Payment Support</h2>
+    <p>
+      For payment plans, financing, or billing inquiries, please consult with our accounts team who will provide flexible solutions tailored to your needs.
+    </p>
+    <h2>32. Rescheduling Services</h2>
+    <p>
+      Clients wishing to reschedule must notify us at least 24 hours in advance to avoid penalties. We will work with you to find a suitable alternative date promptly.
+    </p>
+    <h2>33. Cancellation Charges</h2>
+    <p>
+      Late cancellations or no-shows may incur fees to cover service preparation costs. Details are provided during the booking process.
+    </p>
+    <h2>34. Service Feedback Channels</h2>
+    <p>
+      Apart from direct contact, you can also leave feedback on review sites and social media where we actively engage and respond to client comments.
+    </p>
+    <h2>35. Service Scope Clarification</h2>
+    <p>
+      For complex or large projects, we recommend initial consultations to clarify scope, requirements, and expectations to ensure seamless service delivery.
+    </p>
+    <h2>36. Liability Insurance</h2>
+    <p>
+      Eden Drift Gardening holds comprehensive liability insurance covering property damage or injuries incurred during service provision, providing peace of mind to all clients.
+    </p>
+    <h2>37. Environmental Responsibility</h2>
+    <p>
+      We practice environmentally responsible gardening methods that minimize chemical use and promote biodiversity to protect your surroundings and the planet.
+    </p>
+    <h2>38. Privacy of Communications</h2>
+    <p>
+      Communications between clients and staff are confidential unless disclosure is required by law or necessary to perform services.
+    </p>
+    <h2>39. Feedback Improvements</h2>
+    <p>
+      We continuously review client feedback to identify areas for improvement and enhance customer satisfaction through updated services and policies.
+    </p>
+    <h2>40. Contact Our Team</h2>
+    <p>
+      We encourage you to reach out anytime with questions or service requests. Our contact methods include phone, email, and online forms designed to provide efficient assistance whenever you need.
+    </p>
+  </div>
+</section>
+
+<footer id="contact" role="contentinfo">
+  <p>Contact us at:</p>
+  <address>
+    239 Greene St,<br /> New York, NY 10003,<br /> USA
+  </address>
+  <p><span class="material-icons" aria-hidden="true" style="vertical-align:middle;">phone</span> +1 (855) 911-7722</p>
+  <p><span class="material-icons" aria-hidden="true" style="vertical-align:middle;">email</span> contact@edendriftgardening.com</p>
+  <p>&copy; 2024 Eden Drift Gardening. All rights reserved.</p>
+</footer>
+</body>
+</html>

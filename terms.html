@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terms and Conditions - Eden Drift Gardening</title>
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <style>
+    /* CSS Variables for theme */
+    :root {
+      --color-primary: #256d24; /* deep green */
+      --color-primary-light: #58a447;
+      --color-primary-dark: #1c4c19;
+      --color-background: #fefcf7;
+      --color-text-primary: #334d1e;
+      --color-text-secondary: #6b7280;
+      --color-white: #ffffff;
+      --border-radius: 12px;
+      --spacing-sm: 12px;
+      --spacing-md: 24px;
+      --spacing-lg: 48px;
+      --shadow-light: rgba(0, 0, 0, 0.08);
+    }
+    /* Reset and base styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--color-background);
+      color: var(--color-text-primary);
+      line-height: 1.6;
+      font-size: 18px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a {
+      color: var(--color-primary);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover,
+    a:focus {
+      color: var(--color-primary-light);
+      outline: none;
+    }
+    h1,h2,h3,h4,h5,h6 {
+      margin: 0;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+    }
+    p {
+      color: var(--color-text-secondary);
+      margin-bottom: var(--spacing-md);
+      text-align: justify;
+    }
+    img {
+      max-width: 100%;
+      border-radius: var(--border-radius);
+      display: block;
+      box-shadow: 0 6px 12px var(--shadow-light);
+    }
+    .container {
+      max-width: 900px;
+      margin-left: auto; margin-right: auto;
+      padding-left: var(--spacing-md);
+      padding-right: var(--spacing-md);
+    }
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--color-white);
+      box-shadow: 0 2px 8px var(--shadow-light);
+      z-index: 1000;
+    }
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .logo {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      user-select: none;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .logo-icon {
+      font-size: 2.5rem;
+      color: var(--color-primary-light);
+    }
+    nav {
+      display: flex;
+      gap: var(--spacing-lg);
+    }
+    nav a {
+      font-weight: 600;
+      font-size: 1rem;
+      display: inline-block;
+      padding: 8px 0;
+    }
+    nav a:hover,
+    nav a:focus {
+      color: var(--color-primary-light);
+    }
+    /* Content Section */
+    section.content-section {
+      padding: var(--spacing-lg) 0;
+      background: var(--color-white);
+      border-radius: var(--border-radius);
+      box-shadow: 0 6px 20px var(--shadow-light);
+      margin: var(--spacing-lg) auto;
+    }
+    section.content-section h1 {
+      font-size: 2.75rem;
+      margin-bottom: var(--spacing-lg);
+      text-align: center;
+      color: var(--color-primary-dark);
+    }
+    section.content-section h2 {
+      font-size: 1.75rem;
+      margin-top: var(--spacing-lg);
+      margin-bottom: var(--spacing-md);
+      color: var(--color-primary-dark);
+    }
+    section.content-section p {
+      margin-bottom: var(--spacing-md);
+      font-size: 1rem;
+      text-align: justify;
+    }
+    /* Footer */
+    footer {
+      background-color: var(--color-primary-dark);
+      color: var(--color-white);
+      padding: var(--spacing-lg) var(--spacing-md);
+      text-align: center;
+      font-size: 1rem;
+    }
+    footer address {
+      font-style: normal;
+      line-height: 1.5;
+    }
+    /* Responsive */
+    @media (max-width: 767px) {
+      section.content-section h1 {
+        font-size: 2rem;
+      }
+      nav {
+        gap: var(--spacing-md);
+      }
+      nav a {
+        font-size: 1rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .container {
+        padding-left: var(--spacing-sm);
+        padding-right: var(--spacing-sm);
+      }
+      nav {
+        gap: var(--spacing-sm);
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+<header role="banner" aria-label="Main navigation">
+  <div class="container nav-container">
+    <a href="index.html" class="logo" aria-label="Eden Drift Gardening Home">
+      <span class="material-icons logo-icon" aria-hidden="true" focusable="false">forest</span>
+      Eden Drift
+    </a>
+    <nav aria-label="Primary">
+     <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0"aria-current="page">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+  </div>
+</header>
+
+<section class="content-section" aria-label="Terms and Conditions">
+  <div class="container">
+    <h1>Terms and Conditions</h1>
+    <p>
+      Welcome to the Terms and Conditions of Eden Drift Gardening ("we", "us", or "our"). Please read these terms carefully as they govern your use of our website and services. By accessing or using our services, you agree to be bound by these terms.
+    </p>
+    <h2>1. Acceptance of Terms</h2>
+    <p>
+      By using our website or services, you explicitly agree to comply with and be bound by these Terms and Conditions. If you do not agree with any part of these terms, you should not use our services. These terms constitute a binding legal agreement between you and Eden Drift Gardening that governs your relationship with us.
+    </p>
+    <h2>2. Service Description</h2>
+    <p>
+      We provide professional gardening and landscaping services designed to meet your needs. While we make every effort to provide current and accurate information about our services, prices, and availability on our website, these details are subject to change. Service descriptions are provided for informational purposes and do not constitute a contractual offer unless explicitly stated.
+    </p>
+    <h2>3. Eligibility</h2>
+    <p>
+      Our services and website are intended solely for users who are at least 18 years old or have the legal capacity to enter into contracts. By accessing or using our services, you represent and warrant that you meet this eligibility requirement. If you are acting on behalf of a company or other legal entity, you confirm you have the authority to bind that entity to these terms.
+    </p>
+    <h2>4. Account Registration</h2>
+    <p>
+      When creating an account with us, you agree to provide accurate, complete, and current information. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You agree to notify us immediately of any unauthorized access or use of your account.
+    </p>
+    <h2>5. Payment Terms</h2>
+    <p>
+      Payments for gardening services will be as indicated during the booking process. All prices are in USD unless otherwise stated and are subject to applicable taxes and fees. Payment must be received prior to or as specified for the delivery of services. Late or missed payments may result in suspension or termination of services.
+    </p>
+    <h2>6. Cancellation Policy</h2>
+    <p>
+      You may cancel scheduled services by providing notice within the timeframe specified in your agreement or booking confirmation. Cancellations made less than the prescribed period may be subject to cancellation fees. We reserve the right to cancel or reschedule services in the event of unforeseen circumstances or emergencies, providing notice to affected customers.
+    </p>
+    <h2>7. Service Changes</h2>
+    <p>
+      We reserve the right to modify, suspend, or discontinue any service at any time without prior notice. Modifications may include changes in service scope, pricing, or scheduling. We endeavor to inform customers of material changes as soon as practicable to minimize inconvenience.
+    </p>
+    <h2>8. Customer Obligations</h2>
+    <p>
+      Customers must provide safe and reasonable access to service locations and ensure no hazards that could pose a risk to our staff or equipment. You are responsible for disclosing any pertinent site information that may affect service delivery. You agree not to misuse our services or interfere with their performance.
+    </p>
+    <h2>9. Intellectual Property</h2>
+    <p>
+      All content on our website, including text, graphics, logos, and images, is the exclusive property of Eden Drift Gardening or its licensors. Unauthorized use, reproduction, or distribution of such content is strictly prohibited and may result in legal action. You may not use our intellectual property without express written permission.
+    </p>
+    <h2>10. User Content</h2>
+    <p>
+      If you submit any feedback, comments, or content (collectively 'User Content'), you grant Eden Drift Gardening a non-exclusive, royalty-free, perpetual, irrevocable license to use, reproduce, modify, publish, translate, distribute, and display such content worldwide. You represent that you have all necessary rights to grant this license and that your content does not infringe any third-party rights.
+    </p>
+    <h2>11. Privacy</h2>
+    <p>
+      Your use of our services is also governed by our Privacy Policy, which details how we collect and manage your personal information. We encourage you to review the Privacy Policy carefully before engaging with any services or providing personal data.
+    </p>
+    <h2>12. Limitation of Liability</h2>
+    <p>
+      To the fullest extent permitted under applicable law, Eden Drift Gardening shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising out of or related to your use of our services, even if advised of the possibility of such damages. Our total liability related to any claim shall not exceed the amount paid for the specific service causing the claim.
+    </p>
+    <h2>13. Indemnification</h2>
+    <p>
+      You agree to indemnify, defend, and hold harmless Eden Drift Gardening, its affiliates, officers, employees, and agents from and against any claims, liabilities, damages, losses, or expenses arising out of your breach of these Terms or your misuse of our services.
+    </p>
+    <h2>14. Governing Law</h2>
+    <p>
+      These Terms and Conditions are governed by and construed in accordance with the laws of the State of New York, USA. Any disputes or claims arising out of or relating to these Terms or our services shall be subject to the exclusive jurisdiction and venue of the courts located within New York.
+    </p>
+    <h2>15. Dispute Resolution</h2>
+    <p>
+      We strive to resolve disputes amicably and encourage you to contact us for assistance. If informal discussions fail, disputes will be resolved by binding arbitration in New York under the rules of the American Arbitration Association, which provides efficient, confidential, and binding resolution.
+    </p>
+    <h2>16. Force Majeure</h2>
+    <p>
+      Eden Drift Gardening shall not be responsible for failure or delay in performance due to causes beyond reasonable control, including acts of God, natural disasters, pandemics, governmental restrictions, labor disputes, or other unforeseeable events making performance impossible or impracticable.
+    </p>
+    <h2>17. Modification of Terms</h2>
+    <p>
+      We reserve the right to update or modify these Terms and Conditions at any time without prior notice. Updates will be posted on this page with an updated effective date. Your continued use of our services following such changes constitutes acceptance of the new Terms.
+    </p>
+    <h2>18. Service Warranties</h2>
+    <p>
+      While we intend to provide quality services with due care, we do not provide warranties or guarantees regarding specific results. We disclaim all implied warranties to the extent permitted by law. Our liability is limited to the fullest extent allowed by applicable legislation.
+    </p>
+    <h2>19. Third-Party Services</h2>
+    <p>
+      We may work with third-party contractors or vendors to provide certain services. We are not responsible for their actions or omissions nor do we guarantee their services or compliance with standards. You acknowledge that any use of third-party services is at your own risk.
+    </p>
+    <h2>20. Prohibited Conduct</h2>
+    <p>
+      You agree not to use our website or services for any unlawful, harmful, fraudulent, or abusive purpose. This includes, but is not limited to, unauthorized access, distribution of malware, harassment, spamming, and violation of intellectual property rights. We reserve the right to suspend or terminate access for violations.
+    </p>
+    <h2>21. Termination</h2>
+    <p>
+      We may suspend or terminate your access to our services and website at any time, without notice, if we determine you have breached these Terms or engaged in inappropriate conduct. Termination does not relieve you of any outstanding obligations or liabilities.
+    </p>
+    <h2>22. Refund Policy</h2>
+    <p>
+      Refunds, if applicable, will be governed by our refund policy specified during service purchase or booking. Please contact customer support for refund requests. We reserve the right to approve or deny refunds based on circumstances and policy compliance.
+    </p>
+    <h2>23. Access to Services</h2>
+    <p>
+      We attempt to maintain uninterrupted access to our website and services but do not guarantee continuous availability. Scheduled or emergency maintenance may result in temporary service interruption. We shall not be liable for any losses resulting from temporary unavailability.
+    </p>
+    <h2>24. Marketing and Promotions</h2>
+    <p>
+      Marketing communications and promotional offers are subject to separate terms and conditions. Participation is voluntary and may require additional consent or agreement. We reserve the right to modify or withdraw any offer at any time.
+    </p>
+    <h2>25. Compliance with Law</h2>
+    <p>
+      You agree to comply with all applicable laws and regulations in your use of our services and website. You warrant that your use does not violate any laws or third-party rights.
+    </p>
+    <h2>26. Feedback and Complaints</h2>
+    <p>
+      We encourage you to provide feedback to improve our services and website. Complaints may be submitted via our contact methods. We commit to investigating and responding promptly to all legitimate concerns.
+    </p>
+    <h2>27. Intellectual Property Rights</h2>
+    <p>
+      You acknowledge all intellectual property rights in our website content and services belong to us or our licensors. Use of materials without authorization is prohibited. Requests for permission should be directed to us.
+    </p>
+    <h2>28. Affiliate Links</h2>
+    <p>
+      Our website may include affiliate links earning us commissions at no extra cost to you. We only promote products or services we trust, and affiliate partnerships do not influence our content or integrity.
+    </p>
+    <h2>29. User Generated Content</h2>
+    <p>
+      Any content you submit to us grants Eden Drift Gardening a royalty-free, worldwide, sublicenseable, and transferable license to use and display your content. You confirm your submission does not infringe on others’ rights or violate laws.
+    </p>
+    <h2>30. Limitation on Claims</h2>
+    <p>
+      Claims arising out of or related to use of our services must be brought within one year of the event giving rise to such claim to the maximum extent permitted by law, after which claims will be barred.
+    </p>
+    <h2>31. Severability</h2>
+    <p>
+      If any provision of these Terms is deemed invalid or unenforceable, the affected provision will be modified or severed so as not to affect the validity or enforceability of remaining provisions.
+    </p>
+    <h2>32. Entire Agreement</h2>
+    <p>
+      These Terms together with our Privacy Policy and any other legal notices constitute the entire agreement between you and Eden Drift Gardening regarding the use of our services and supersede all prior agreements.
+    </p>
+    <h2>33. Waiver</h2>
+    <p>
+      Our failure or delay to enforce any right or provision of these Terms shall not be deemed a waiver of such right or provision nor affect our ability to enforce it later.
+    </p>
+    <h2>34. No Partnership or Agency</h2>
+    <p>
+      Nothing in these Terms creates a partnership, joint venture, agency, or employment relationship between you and Eden Drift Gardening. Neither party may bind the other without prior written consent.
+    </p>
+    <h2>35. Language</h2>
+    <p>
+      The official language of these Terms is English. Translations are provided for convenience and do not constitute legally binding documents.
+    </p>
+    <h2>36. Accessibility</h2>
+    <p>
+      We are committed to making our website accessible and welcome feedback regarding any accessibility issues experienced by users.
+    </p>
+    <h2>37. Contact Details</h2>
+    <p>
+      Should you have any questions, concerns, or requests related to these terms, please contact us at info@edendriftgardening.com or call +1 (855) 911-7722. We strive to assist and respond promptly.
+    </p>
+    <h2>38. Updates and Notifications</h2>
+    <p>
+      We may revise these Terms periodically. Updated versions will be published online with an updated effective date. We recommend regular review to stay informed of any changes affecting your use of our services.
+    </p>
+    <h2>39. User Conduct</h2>
+    <p>
+      You agree to use our site and services responsibly and not to engage in conduct that disrupts or harms the experience of other users, our staff, or operations.
+    </p>
+    <h2>40. Legal Jurisdiction</h2>
+    <p>
+      Any legal disputes related to these Terms or the use of our services shall be governed by New York State law and resolved in courts located within New York jurisdiction exclusively. By using our services, you consent to this jurisdiction.
+    </p>
+  </div>
+</section>
+
+<footer id="contact" role="contentinfo">
+  <p>Contact us at:</p>
+  <address>
+    239 Greene St,<br />
+    New York, NY 10003,<br />
+    USA
+  </address>
+  <p><span class="material-icons" aria-hidden="true" style="vertical-align:middle;">phone</span> +1 (855) 911-7722</p>
+  <p><span class="material-icons" aria-hidden="true" style="vertical-align:middle;">email</span> contact@edendriftgardening.com</p>
+  <p>&copy; 2024 Eden Drift Gardening. All rights reserved.</p>
+</footer>
+</body>
+</html>
+
